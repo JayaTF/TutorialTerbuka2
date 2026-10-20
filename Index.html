@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Terbuka - Belajar Terbuka, Ilmu Untuk Semua!</title>
+    <!-- Tailwind CSS untuk Styling Cepat & Modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        ytRed: '#FF0000',
+                        brandBlue: '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="bg-ytRed text-white p-2 rounded-lg">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
+                        </div>
+                        <span class="font-bold text-xl md:text-2xl text-gray-900 tracking-tight">Tutorial Terbuka</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-brandBlue font-medium transition">Beranda</a>
+                    <a href="#materi" class="text-gray-600 hover:text-brandBlue font-medium transition">Kategori Materi</a>
+                    <a href="#video" class="text-gray-600 hover:text-brandBlue font-medium transition">Video Terbaru</a>
+                    <a href="https://youtube.com/@tutorialterbuka" target="_blank" class="bg-ytRed text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition shadow-lg shadow-red-200 flex items-center gap-2">
+                        Subscribe
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-gradient pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <span class="text-brandBlue font-bold tracking-wider uppercase text-sm mb-4 block">Channel Edukasi #1</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    Belajar Terbuka,<br> <span class="text-ytRed">Ilmu Untuk Semua!</span>
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Selamat datang di website resmi <strong>Tutorial Terbuka</strong>. Kami berdedikasi membantu mahasiswa memahami Fisika Dasar (Fisdas) dan Matematika Dasar (Matdas) untuk persiapan UTS, UAS, dan TPB ITERA dengan pembahasan yang mudah dipahami.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://youtube.com/@tutorialterbuka" target="_blank" class="bg-ytRed text-white px-8 py-3.5 rounded-full font-bold hover:bg-red-700 transition shadow-lg shadow-red-200 text-center flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-youtube"></i> Tonton di YouTube
+                    </a>
+                    <a href="#video" class="bg-white text-gray-800 border-2 border-gray-200 px-8 py-3.5 rounded-full font-bold hover:border-gray-300 hover:bg-gray-50 transition text-center">
+                        Lihat Video Terbaru
+                    </a>
+                </div>
+                
+                <!-- Statistik Channel -->
+                <div class="mt-12 flex items-center justify-center md:justify-start gap-10 border-t border-gray-200 pt-8">
+                    <div>
+                        <h3 class="font-bold text-3xl text-gray-900">10.2K+</h3>
+                        <p class="text-sm text-gray-500 font-medium">Subscribers</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-3xl text-gray-900">800+</h3>
+                        <p class="text-sm text-gray-500 font-medium">Video Edukasi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative w-full">
+                <!-- Ilustrasi Hero -->
+                <div class="absolute inset-0 bg-blue-100 rounded-full scale-90 opacity-50 blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Belajar Online" class="relative z-10 rounded-2xl shadow-2xl border-4 border-white object-cover w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori Materi Section -->
+    <section id="materi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Fokus Materi Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami menyediakan berbagai playlist pembahasan materi dan kisi-kisi soal ujian yang disusun secara terstruktur.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center text-brandBlue text-2xl mb-6">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Fisika Dasar (Fisdas)</h3>
+                    <p class="text-gray-600">Pembahasan tuntas materi Pengantar Fisika & Fisika Dasar mulai dari teori hingga latihan soal harian.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-red-100 w-14 h-14 rounded-xl flex items-center justify-center text-ytRed text-2xl mb-6">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Matematika Dasar (Matdas)</h3>
+                    <p class="text-gray-600">Bedah soal-soal Matematika Dasar dengan rumus cepat dan pemahaman konsep yang matang.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="bg-green-100 w-14 h-14 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Persiapan UTS & UAS</h3>
+                    <p class="text-gray-600">Bocoran, kisi-kisi, dan pembahasan lengkap soal UTS & UAS khususnya untuk anak TPB ITERA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Terbaru Section -->
+    <section id="video" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Video Pembahasan Terbaru</h2>
+                    <p class="text-gray-600">Tonton langsung materi terbaru dari channel Tutorial Terbuka.</p>
+                </div>
+                <a href="https://youtube.com/@tutorialterbuka" target="_blank" class="hidden md:inline-flex text-brandBlue font-semibold hover:text-blue-800 items-center gap-2">
+                    Lihat Semua Video <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Video 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="video-container">
+                        <!-- ID wg2_xTNY1g8 : Spil Kisi-kisi UTS Fisika -->
+                        <iframe src="https://www.youtube.com/embed/wg2_xTNY1g8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-900 line-clamp-2 mb-2 hover:text-brandBlue transition">
+                            <a href="https://www.youtube.com/watch?v=wg2_xTNY1g8" target="_blank">Spil 5 Soal Kisi-kisi UTS Pengantar Fisika</a>
+                        </h3>
+                        <p class="text-sm text-gray-500">Tutorial Terbuka • Terbaru</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="video-container">
+                        <!-- ID _d1qCtr5Dl8 : Pembahasan Soal UTS Matdas -->
+                        <iframe src="https://www.youtube.com/embed/_d1qCtr5Dl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-900 line-clamp-2 mb-2 hover:text-brandBlue transition">
+                            <a href="https://www.youtube.com/watch?v=_d1qCtr5Dl8" target="_blank">Pembahasan Soal UTS Matdas 1A | Modul 2 Part 4</a>
+                        </h3>
+                        <p class="text-sm text-gray-500">Tutorial Terbuka</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="video-container">
+                        <!-- ID ptSgVLue-pA : Pembahasan Soal UAS Matdas -->
+                        <iframe src="https://www.youtube.com/embed/ptSgVLue-pA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-900 line-clamp-2 mb-2 hover:text-brandBlue transition">
+                            <a href="https://www.youtube.com/watch?v=ptSgVLue-pA" target="_blank">PEMBAHASAN SOAL UAS MATDAS 2A TPB ITERA</a>
+                        </h3>
+                        <p class="text-sm text-gray-500">Tutorial Terbuka</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="https://youtube.com/@tutorialterbuka" target="_blank" class="text-brandBlue font-semibold hover:text-blue-800 flex items-center justify-center gap-2">
+                    Lihat Semua Video <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-6">
+                        <div class="bg-ytRed text-white p-2 rounded-lg">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
+                        </div>
+                        <span class="font-bold text-2xl text-white tracking-tight">Tutorial Terbuka</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Belajar terbuka, ilmu untuk semua! Solusi terbaik untuk mahasiwa dalam menguasai Matematika Dasar dan Fisika Dasar.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://youtube.com/@tutorialterbuka" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-ytRed hover:text-white transition">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-pink-600 hover:text-white transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Tautan Langsung</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#materi" class="text-gray-400 hover:text-white transition">Kategori Materi</a></li>
+                        <li><a href="#video" class="text-gray-400 hover:text-white transition">Video Terbaru</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Dukung Kami</h4>
+                    <p class="text-gray-400 mb-4">Dukung channel Tutorial Terbuka agar terus bisa memberikan konten edukasi terbaik dan gratis bagi mahasiswa!</p>
+                    <a href="https://youtube.com/@tutorialterbuka" target="_blank" class="inline-block border border-gray-600 text-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition font-medium">
+                        Kunjungi Channel
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Tutorial Terbuka. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
